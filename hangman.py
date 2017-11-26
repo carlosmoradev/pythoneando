@@ -172,4 +172,19 @@ ___________.._______
 . .          `'       . .''', '''
 ''']
 
-IMAGES
+WORDS = [
+    'hardware',
+    'software',
+    'mouse',
+    'keyboard',
+    'monitor',
+    'card',
+    'network',
+    'bandwidth'
+]
+
+
+
+
+# if __name__ == '__main__':
+#     main()
