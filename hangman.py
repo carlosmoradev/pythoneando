@@ -199,6 +199,38 @@ def run():
     hidden_word = ['-'] * len(word)
     tries = 0
 
+    while True:
+        display_board(hidden_word, tries)
+        current_letter = str(raw_input('Choose a Letter'))
+
+        letter_indexes = []
+        for idx in range(len(word)):
+            if word[idx] == current_letter:
+                letter_indexes.append(idx)
+
+        if len(letter_indexes) == 0:
+            tries += 1
+
+            if tries == 7:
+                display_board(hidden_word, tries)
+                print('')
+                print('sorry, you lose.  The right word is {}'.format(word))
+                break
+        else:
+            for idx in letter_indexes:
+                hidden_word[idx] = current_letter
+            
+            letter_indexes = []
+
+        try:
+            hidden_word.index('-')
+        except ValueError:
+            print('')
+            print('Contrats!  You win! The winner word is {}'.format(word))
+            break
+
+
+
 
 if __name__ == '__main__':
     print('HANGMAN GAME.')
