@@ -192,7 +192,7 @@ def display_board(hidden_word, tries):
     print(IMAGES[tries])
     print ('')
     print(hidden_word)
-    print(' --- * --- * --- * --- * --- * --- * --- *')
+    print(' --- *' * (len(hidden_word) -1) )
 
 def run():
     word = random_word()
