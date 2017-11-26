@@ -28,3 +28,4 @@ if __name__ == '__main__':
         print('All the characters are repeated. ')
     else:
         print('The first repeated character is {}'.format(result))
+
