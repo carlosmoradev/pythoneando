@@ -6,14 +6,17 @@ informará y terminará el programa.
 
 Ejemplo:
 
-|       secuencia       |   caracter repetido   |
-| abavabad              |           v           |
+|       secuencia       | caracter no repetido  |
+| abavabpad             |           v           |
 | atgcaatgcccata        |           _ (NO HAY)  |
 
 """
 
 def first_not_repeating_char(char_sequence):
-    pass
+    for letter in char_sequence:
+        if letter[0] == letter[1]:
+            print('boths are equals')
+
 
 
 
@@ -27,5 +30,5 @@ if __name__ == '__main__':
     if result == '-':
         print('All the characters are repeated. ')
     else:
-        print('The first repeated character is {}'.format(result))
+        print('The first not repeated character is {}'.format(result))
 
