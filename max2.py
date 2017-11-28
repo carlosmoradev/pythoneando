@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-
-def numax(p, s):
+""" ejercicios basicos de prueba """
+def numax(p, s): """compara dos numeros"""
     if p > s:
         print("n1 es mayor que n2")
     elif p < s:
